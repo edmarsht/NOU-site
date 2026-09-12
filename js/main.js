@@ -59,4 +59,21 @@
       }
     });
   }
+
+  var toggleButtons = document.querySelectorAll(".pricing-toggle-btn");
+  var amountValue = document.querySelector(".pricing-amount-value");
+  var annualNote = document.querySelector(".pricing-annual");
+
+  if (toggleButtons.length && amountValue && annualNote) {
+    toggleButtons.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var period = btn.dataset.period;
+        toggleButtons.forEach(function (b) {
+          b.classList.toggle("is-active", b === btn);
+        });
+        amountValue.textContent = amountValue.dataset[period];
+        annualNote.textContent = annualNote.dataset[period + "Text"];
+      });
+    });
+  }
 })();

@@ -797,11 +797,8 @@ input:focus-visible {
 }
 
 /* Pricing */
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-  max-width: 760px;
+.pricing-single {
+  max-width: 380px;
   margin: 0 auto;
 }
 
@@ -825,16 +822,30 @@ input:focus-visible {
   box-shadow: 0 24px 48px -28px rgba(var(--shadow-ink), 0.4);
 }
 
-.pricing-badge {
-  position: absolute;
-  top: -13px;
-  left: 32px;
+.pricing-toggle {
+  display: inline-flex;
+  padding: 4px;
+  background: var(--bg-alt);
+  border-radius: 999px;
+  margin-bottom: 22px;
+}
+
+.pricing-toggle-btn {
+  border: none;
+  background: transparent;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--ink-muted);
+  padding: 8px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+
+.pricing-toggle-btn.is-active {
   background: var(--accent);
   color: #fff;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 5px 12px;
-  border-radius: 999px;
 }
 
 .pricing-kicker {
@@ -902,6 +913,14 @@ input:focus-visible {
 .pricing-cta {
   align-self: flex-start;
   margin-top: auto;
+}
+
+.pricing-multi-note {
+  text-align: center;
+  font-size: 14px;
+  color: var(--ink-muted);
+  max-width: 480px;
+  margin: 22px auto 0;
 }
 
 .referral-banner {

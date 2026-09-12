@@ -212,6 +212,13 @@
                   <span class="app-mock-entry-desc">Endormie rapidement</span>
                 </div>
               </div>
+              <div class="app-mock-entry">
+                <span class="mock-time">14:45</span>
+                <div>
+                  <span class="app-mock-entry-label">🌤️ Fin de sieste</span>
+                  <span class="app-mock-entry-desc">Réveillée de bonne humeur</span>
+                </div>
+              </div>
             </div>
             <div class="app-mock-composer">
               <div class="app-mock-types">
@@ -261,6 +268,13 @@
                 </div>
               </div>
               <div class="app-mock-entry">
+                <span class="mock-time">14:45</span>
+                <div>
+                  <span class="app-mock-entry-label">🌤️ Fin de sieste</span>
+                  <span class="app-mock-entry-desc">Réveillée de bonne humeur</span>
+                </div>
+              </div>
+              <div class="app-mock-entry">
                 <span class="mock-time">16:00</span>
                 <div>
                   <span class="app-mock-entry-label">📷 Photo</span>
@@ -300,31 +314,34 @@
         <p>La nounou utilise NOU gratuitement. L'abonnement est réglé par les parents, avec autant de comptes parents que nécessaire (papa, maman, grands-parents…).</p>
       </div>
 
-      <div class="pricing-grid">
-        <article class="pricing-card reveal">
-          <p class="pricing-kicker">1 enfant</p>
-          <p class="pricing-amount">18&nbsp;€<span>/mois</span></p>
-          <p class="pricing-annual">ou 180&nbsp;€/an <strong>— 2 mois offerts</strong></p>
+      <div class="pricing-single reveal">
+        <article class="pricing-card pricing-card-highlight">
+          <div class="pricing-toggle" role="group" aria-label="Choix de facturation">
+            <button type="button" class="pricing-toggle-btn is-active" data-period="monthly">Mensuel</button>
+            <button type="button" class="pricing-toggle-btn" data-period="annual">Annuel</button>
+          </div>
+
+          <p class="pricing-kicker">Par enfant</p>
+          <p class="pricing-amount">
+            <span class="pricing-amount-value" data-monthly="18" data-annual="15">18</span>&nbsp;€<span>/mois</span>
+          </p>
+          <p class="pricing-annual" data-monthly-text="Facturé chaque mois, sans engagement" data-annual-text="Facturé 180 € une fois par an — 2 mois offerts">
+            Facturé chaque mois, sans engagement
+          </p>
+
           <ul class="pricing-features">
             <li>Journal illimité : repas, sieste, activités, photos, remarques</li>
             <li>Plusieurs comptes parents reliés à l'enfant</li>
             <li>Suivi en temps réel</li>
           </ul>
-          <a href="#contact" class="btn btn-ghost pricing-cta">Être prévenu·e au lancement</a>
-        </article>
-
-        <article class="pricing-card pricing-card-highlight reveal">
-          <p class="pricing-badge">Meilleur tarif par enfant</p>
-          <p class="pricing-kicker">2 enfants</p>
-          <p class="pricing-amount">30&nbsp;€<span>/mois</span></p>
-          <p class="pricing-annual">ou 300&nbsp;€/an <strong>— 2 mois offerts</strong></p>
-          <ul class="pricing-features">
-            <li>Journal illimité pour les deux enfants</li>
-            <li>Plusieurs comptes parents reliés aux enfants</li>
-            <li>Suivi en temps réel</li>
-          </ul>
           <a href="#contact" class="btn btn-primary pricing-cta">Être prévenu·e au lancement</a>
         </article>
+
+        <p class="pricing-multi-note">
+          Plusieurs enfants ? Le tarif est dégressif — par exemple 30&nbsp;€/mois pour 2 enfants
+          (ou 300&nbsp;€/an, 2 mois offerts), et ça continue au-delà de deux enfants.
+          Contactez-nous pour un tarif adapté à votre famille.
+        </p>
       </div>
 
       <div class="referral-banner reveal">
