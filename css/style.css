@@ -796,6 +796,149 @@ input:focus-visible {
   margin-bottom: 0;
 }
 
+/* Pricing */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-4px);
+}
+
+.pricing-card-highlight {
+  border-color: var(--accent);
+  box-shadow: 0 24px 48px -28px rgba(var(--shadow-ink), 0.4);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -13px;
+  left: 32px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+
+.pricing-kicker {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--ink-muted);
+  margin-bottom: 6px;
+}
+
+.pricing-amount {
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 4px;
+  letter-spacing: -0.02em;
+}
+
+.pricing-amount span {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink-muted);
+}
+
+.pricing-annual {
+  font-size: 13px;
+  color: var(--ink-muted);
+  margin-bottom: 22px;
+}
+
+.pricing-annual strong {
+  color: var(--accent-deep);
+}
+
+.pricing-features {
+  list-style: none;
+  margin: 0 0 28px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.pricing-features li {
+  font-size: 14px;
+  color: var(--ink-muted);
+  padding-left: 22px;
+  position: relative;
+}
+
+.pricing-features li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 12px;
+  height: 7px;
+  border-left: 2px solid var(--accent-deep);
+  border-bottom: 2px solid var(--accent-deep);
+  transform: rotate(-45deg);
+}
+
+.pricing-cta {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.referral-banner {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  max-width: 760px;
+  margin: 40px auto 0;
+  background: var(--accent-soft);
+  border-radius: var(--radius-md);
+  padding: 22px 28px;
+}
+
+.referral-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.referral-title {
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+
+.referral-text {
+  font-size: 14px;
+  color: var(--ink-muted);
+  margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .referral-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 /* CTA */
 .section-cta {
   position: relative;
