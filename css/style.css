@@ -313,6 +313,30 @@ input:focus-visible {
   margin-top: 12px;
 }
 
+.platform-note {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 22px 0 0;
+  font-size: 13px;
+  color: var(--ink-muted);
+}
+
+.platform-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.platform-badge svg {
+  width: 15px;
+  height: 15px;
+  color: var(--accent-deep);
+}
+
 .hero-visual {
   flex: 1 1 320px;
   display: flex;
@@ -560,14 +584,56 @@ input:focus-visible {
   margin-bottom: 14px;
 }
 
-.app-mock {
+.device-frame {
   width: 100%;
-  max-width: 250px;
-  padding: 18px 16px;
+  max-width: 252px;
+  background: var(--ink);
+  border-radius: 36px;
+  padding: 12px 12px 20px;
+  position: relative;
+  box-shadow: 0 32px 58px -26px rgba(var(--shadow-ink), 0.45);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.showcase-phone-parent .app-mock {
-  box-shadow: 0 40px 70px -30px rgba(var(--shadow-ink), 0.5);
+.showcase-phone-parent .device-frame {
+  box-shadow: 0 44px 76px -24px rgba(var(--shadow-ink), 0.55);
+}
+
+.showcase-phone:hover .device-frame {
+  transform: translateY(-4px);
+}
+
+.device-frame::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 68px;
+  height: 18px;
+  background: var(--ink);
+  border-radius: 999px;
+  z-index: 2;
+}
+
+.app-mock {
+  position: relative;
+  background: var(--bg-raised);
+  border-radius: 26px;
+  padding: 32px 16px 26px;
+  overflow: hidden;
+}
+
+.app-mock::after {
+  content: "";
+  position: absolute;
+  bottom: 9px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--border);
 }
 
 .app-mock-title {
