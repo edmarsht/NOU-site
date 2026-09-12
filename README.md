@@ -15,12 +15,15 @@ Puis ouvre http://localhost:8000
 ## Structure
 
 - `index.html` — page unique (hero, fonctionnalités, comment ça marche, contact)
-- `css/style.css` — styles, mêmes couleurs que l'application mobile
+- `css/style.css` — styles (police Fraunces + Plus Jakarta Sans, palette terracotta/crème)
+- `js/main.js` — révélation au scroll, en-tête au scroll, validation du formulaire
 
-## À faire avant mise en ligne
+## En ligne
 
-- Le formulaire de contact (`#contact`) ne fait qu'afficher un `action="#"` :
-  il faut le relier à un vrai service (ex. Firebase Function, Mailchimp,
-  Formspree) pour collecter réellement les emails.
-- Déploiement possible sur GitHub Pages, comme `ec-immo-site` (ajouter un
-  fichier `CNAME` si un nom de domaine est prévu).
+Déployé sur GitHub Pages : https://edmarsht.github.io/NOU-site/
+
+## À faire avant le vrai lancement
+
+- Le formulaire de contact valide l'email et affiche un message de succès
+  côté client, mais n'envoie encore les emails nulle part : il faut le
+  relier à un vrai service (ex. Firebase Function, Mailchimp, Formspree).
