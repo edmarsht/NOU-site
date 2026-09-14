@@ -573,6 +573,7 @@ input:focus-visible {
   left: 50%;
   width: min(88%, 640px);
   height: auto;
+  aspect-ratio: 400 / 170;
   color: var(--accent-deep);
   transform: translate(-50%, -50%);
   will-change: transform;
