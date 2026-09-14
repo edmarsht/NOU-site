@@ -559,8 +559,61 @@ input:focus-visible {
   font-size: 15px;
 }
 
+/* Parallax illustration band */
+.parallax-band {
+  position: relative;
+  overflow: hidden;
+  height: 170px;
+  background: var(--accent-soft);
+}
+
+.parallax-illustration {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(88%, 640px);
+  height: auto;
+  color: var(--accent-deep);
+  transform: translate(-50%, -50%);
+  will-change: transform;
+}
+
+@media (max-width: 640px) {
+  .parallax-band {
+    height: 130px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .parallax-illustration {
+    transform: translate(-50%, -50%) !important;
+  }
+}
+
 /* Feature highlight (hours & report) */
+.feature-highlight {
+  position: relative;
+}
+
+.seam-snake {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  width: min(85%, 760px);
+  height: auto;
+  color: var(--accent);
+  pointer-events: none;
+}
+
+@media (max-width: 640px) {
+  .seam-snake {
+    width: 130%;
+  }
+}
+
 .feature-highlight-inner {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 56px;

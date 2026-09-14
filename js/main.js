@@ -76,4 +76,23 @@
       });
     });
   }
+
+  var parallaxEls = document.querySelectorAll("[data-parallax]");
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (parallaxEls.length && !reduceMotion) {
+    var onParallaxScroll = function () {
+      parallaxEls.forEach(function (el) {
+        var speed = parseFloat(el.dataset.parallax) || 0.15;
+        var rect = el.getBoundingClientRect();
+        var viewportMiddle = window.innerHeight / 2;
+        var elMiddle = rect.top + rect.height / 2;
+        var offset = (viewportMiddle - elMiddle) * speed;
+        el.style.transform = "translate(-50%, calc(-50% + " + offset + "px))";
+      });
+    };
+    onParallaxScroll();
+    window.addEventListener("scroll", onParallaxScroll, { passive: true });
+    window.addEventListener("resize", onParallaxScroll);
+  }
 })();
