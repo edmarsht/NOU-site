@@ -595,23 +595,6 @@ input:focus-visible {
   position: relative;
 }
 
-.seam-snake {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -55%);
-  width: min(85%, 760px);
-  height: auto;
-  color: var(--accent);
-  pointer-events: none;
-}
-
-@media (max-width: 640px) {
-  .seam-snake {
-    width: 130%;
-  }
-}
-
 .feature-highlight-inner {
   position: relative;
   display: flex;
