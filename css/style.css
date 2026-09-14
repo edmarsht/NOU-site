@@ -559,6 +559,107 @@ input:focus-visible {
   font-size: 15px;
 }
 
+/* Feature highlight (hours & report) */
+.feature-highlight-inner {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  flex-wrap: wrap;
+}
+
+.feature-highlight-text {
+  flex: 1 1 420px;
+}
+
+.feature-highlight-text .section-title {
+  margin-top: 0;
+}
+
+.feature-highlight-list {
+  margin-top: 22px;
+}
+
+.feature-highlight-visual {
+  flex: 1 1 320px;
+  display: flex;
+  justify-content: center;
+}
+
+.report-card {
+  width: 100%;
+  max-width: 340px;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 30px 28px;
+  box-shadow: 0 32px 60px -30px rgba(var(--shadow-ink), 0.4);
+}
+
+.report-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.report-card-period {
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--ink-muted);
+}
+
+.report-card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 14px;
+  color: var(--ink-muted);
+  padding: 8px 0;
+}
+
+.report-card-value {
+  font-weight: 600;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.report-card-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 8px 0;
+}
+
+.report-card-total {
+  font-size: 15px;
+  padding-top: 12px;
+}
+
+.report-card-total span:first-child {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.report-card-total .report-card-value {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 22px;
+  color: var(--accent-deep);
+}
+
+.report-card-note {
+  margin: 20px 0 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent-deep);
+  background: var(--accent-soft);
+  padding: 9px 12px;
+  border-radius: 999px;
+}
+
 /* Showcase (app screens) */
 .showcase-grid {
   display: grid;
