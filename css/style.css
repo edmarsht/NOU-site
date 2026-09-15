@@ -457,50 +457,25 @@ input:focus-visible {
 }
 
 /* Kid's drawings, blended into the background, kept discreet */
-.hero-collage {
-  position: absolute;
-  top: -10%;
-  right: -10%;
-  width: 55%;
-  max-width: 620px;
-  height: auto;
-  transform: rotate(-3deg);
-  mix-blend-mode: multiply;
-  opacity: 0.3;
-  -webkit-mask-image: radial-gradient(ellipse 65% 60% at 50% 40%, #000 45%, transparent 95%);
-  mask-image: radial-gradient(ellipse 65% 60% at 50% 40%, #000 45%, transparent 95%);
-  pointer-events: none;
-  z-index: 0;
-}
-
-@media (max-width: 760px) {
-  .hero-collage {
-    width: 85%;
-    right: -22%;
-    top: -6%;
-    opacity: 0.2;
-  }
-}
-
 .heures-accent-drawing {
   position: absolute;
-  right: -14px;
-  bottom: -20px;
-  width: 170px;
+  right: -36px;
+  bottom: -46px;
+  width: 340px;
   height: auto;
   transform: rotate(-8deg);
   mix-blend-mode: multiply;
-  opacity: 0.32;
+  opacity: 0.5;
   pointer-events: none;
   z-index: 0;
 }
 
 @media (max-width: 900px) {
   .heures-accent-drawing {
-    width: 120px;
-    right: -10px;
-    bottom: -14px;
-    opacity: 0.22;
+    width: 220px;
+    right: -20px;
+    bottom: -26px;
+    opacity: 0.4;
   }
 }
 
