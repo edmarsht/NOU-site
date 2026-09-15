@@ -288,30 +288,6 @@ input:focus-visible {
   z-index: 0;
 }
 
-.hero-collage {
-  position: absolute;
-  top: -8%;
-  left: 50%;
-  width: 135%;
-  max-width: 1520px;
-  height: auto;
-  transform: translateX(-50%) rotate(-2deg);
-  mix-blend-mode: multiply;
-  opacity: 0.55;
-  -webkit-mask-image: radial-gradient(ellipse 68% 62% at 50% 32%, #000 50%, transparent 96%);
-  mask-image: radial-gradient(ellipse 68% 62% at 50% 32%, #000 50%, transparent 96%);
-  pointer-events: none;
-  z-index: 0;
-}
-
-@media (max-width: 760px) {
-  .hero-collage {
-    width: 220%;
-    top: -4%;
-    opacity: 0.4;
-  }
-}
-
 .hero-inner {
   position: relative;
   z-index: 1;
@@ -478,6 +454,80 @@ input:focus-visible {
 
 .mock-label {
   color: var(--ink);
+}
+
+/* Fridge drawing (kid's drawing, shown proudly, taped/pinned) */
+.fridge-drawing {
+  position: relative;
+  display: inline-block;
+  padding: 7px 7px 18px;
+  background: var(--bg-raised);
+  border-radius: 5px;
+  box-shadow:
+    0 22px 32px -16px rgba(var(--shadow-ink), 0.45),
+    0 4px 10px -2px rgba(var(--shadow-ink), 0.2);
+  transition: transform 0.5s var(--ease-spring), box-shadow 0.5s var(--ease-spring);
+}
+
+.fridge-drawing img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+
+.fridge-magnet {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle at 33% 28%, #fff 0%, var(--accent) 42%, var(--accent-deep) 100%);
+  box-shadow: 0 3px 7px rgba(var(--shadow-ink), 0.4);
+  z-index: 1;
+}
+
+.fridge-drawing-hero {
+  width: 132px;
+  margin: 0 0 24px -4px;
+  transform: rotate(-7deg);
+}
+
+.fridge-drawing-hero:hover {
+  transform: rotate(-7deg) translateY(-4px);
+  box-shadow:
+    0 28px 38px -16px rgba(var(--shadow-ink), 0.5),
+    0 4px 10px -2px rgba(var(--shadow-ink), 0.22);
+}
+
+.fridge-drawing-heures {
+  position: absolute;
+  top: -22px;
+  left: -30px;
+  width: 148px;
+  transform: rotate(-10deg);
+  z-index: 2;
+}
+
+.fridge-drawing-heures:hover {
+  transform: rotate(-10deg) translateY(-4px);
+}
+
+@media (max-width: 900px) {
+  .fridge-drawing-heures {
+    width: 118px;
+    top: -16px;
+    left: -18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .fridge-drawing-hero {
+    width: 112px;
+    margin-bottom: 20px;
+  }
 }
 
 /* Sections */
@@ -654,34 +704,6 @@ input:focus-visible {
   overflow: hidden;
 }
 
-.heures-accent-drawing {
-  position: absolute;
-  right: -30px;
-  bottom: -36px;
-  width: 300px;
-  height: auto;
-  transform: rotate(-8deg);
-  mix-blend-mode: multiply;
-  opacity: 0.85;
-  pointer-events: none;
-  z-index: 0;
-}
-
-@media (max-width: 900px) {
-  .heures-accent-drawing {
-    width: 210px;
-    right: -20px;
-    bottom: -24px;
-    opacity: 0.6;
-  }
-}
-
-@media (max-width: 640px) {
-  .heures-accent-drawing {
-    display: none;
-  }
-}
-
 .feature-highlight-inner {
   position: relative;
   z-index: 1;
@@ -709,9 +731,14 @@ input:focus-visible {
   justify-content: center;
 }
 
-.report-card-shell {
+.report-card-wrap {
+  position: relative;
   width: 100%;
   max-width: 360px;
+}
+
+.report-card-shell {
+  width: 100%;
   padding: 9px;
   border-radius: calc(var(--radius-lg) + 9px);
   background: linear-gradient(160deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.15));
