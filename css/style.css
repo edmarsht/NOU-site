@@ -459,9 +459,9 @@ input:focus-visible {
 /* Kid's drawings, blended into the background, kept discreet */
 .heures-accent-drawing {
   position: absolute;
-  right: -36px;
-  bottom: -46px;
-  width: 340px;
+  right: -47px;
+  bottom: -60px;
+  width: 442px;
   height: auto;
   transform: rotate(-8deg);
   mix-blend-mode: multiply;
@@ -472,9 +472,9 @@ input:focus-visible {
 
 @media (max-width: 900px) {
   .heures-accent-drawing {
-    width: 220px;
-    right: -20px;
-    bottom: -26px;
+    width: 286px;
+    right: -26px;
+    bottom: -34px;
     opacity: 0.4;
   }
 }
