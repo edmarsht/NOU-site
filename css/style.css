@@ -456,77 +456,57 @@ input:focus-visible {
   color: var(--ink);
 }
 
-/* Fridge drawing (kid's drawing, shown proudly, taped/pinned) */
-.fridge-drawing {
-  position: relative;
-  display: inline-block;
-  padding: 7px 7px 18px;
-  background: var(--bg-raised);
-  border-radius: 5px;
-  box-shadow:
-    0 22px 32px -16px rgba(var(--shadow-ink), 0.45),
-    0 4px 10px -2px rgba(var(--shadow-ink), 0.2);
-  transition: transform 0.5s var(--ease-spring), box-shadow 0.5s var(--ease-spring);
-}
-
-.fridge-drawing img {
-  display: block;
-  width: 100%;
+/* Kid's drawings, blended into the background, kept discreet */
+.hero-collage {
+  position: absolute;
+  top: -10%;
+  right: -10%;
+  width: 55%;
+  max-width: 620px;
   height: auto;
-  border-radius: 2px;
+  transform: rotate(-3deg);
+  mix-blend-mode: multiply;
+  opacity: 0.3;
+  -webkit-mask-image: radial-gradient(ellipse 65% 60% at 50% 40%, #000 45%, transparent 95%);
+  mask-image: radial-gradient(ellipse 65% 60% at 50% 40%, #000 45%, transparent 95%);
+  pointer-events: none;
+  z-index: 0;
 }
 
-.fridge-magnet {
+@media (max-width: 760px) {
+  .hero-collage {
+    width: 85%;
+    right: -22%;
+    top: -6%;
+    opacity: 0.2;
+  }
+}
+
+.heures-accent-drawing {
   position: absolute;
-  top: -10px;
-  left: 50%;
-  width: 19px;
-  height: 19px;
-  border-radius: 50%;
-  transform: translateX(-50%);
-  background: radial-gradient(circle at 33% 28%, #fff 0%, var(--accent) 42%, var(--accent-deep) 100%);
-  box-shadow: 0 3px 7px rgba(var(--shadow-ink), 0.4);
-  z-index: 1;
-}
-
-.fridge-drawing-hero {
-  width: 132px;
-  margin: 0 0 24px -4px;
-  transform: rotate(-7deg);
-}
-
-.fridge-drawing-hero:hover {
-  transform: rotate(-7deg) translateY(-4px);
-  box-shadow:
-    0 28px 38px -16px rgba(var(--shadow-ink), 0.5),
-    0 4px 10px -2px rgba(var(--shadow-ink), 0.22);
-}
-
-.fridge-drawing-heures {
-  position: absolute;
-  top: -22px;
-  left: -30px;
-  width: 148px;
-  transform: rotate(-10deg);
-  z-index: 2;
-}
-
-.fridge-drawing-heures:hover {
-  transform: rotate(-10deg) translateY(-4px);
+  right: -14px;
+  bottom: -20px;
+  width: 170px;
+  height: auto;
+  transform: rotate(-8deg);
+  mix-blend-mode: multiply;
+  opacity: 0.32;
+  pointer-events: none;
+  z-index: 0;
 }
 
 @media (max-width: 900px) {
-  .fridge-drawing-heures {
-    width: 118px;
-    top: -16px;
-    left: -18px;
+  .heures-accent-drawing {
+    width: 120px;
+    right: -10px;
+    bottom: -14px;
+    opacity: 0.22;
   }
 }
 
 @media (max-width: 640px) {
-  .fridge-drawing-hero {
-    width: 112px;
-    margin-bottom: 20px;
+  .heures-accent-drawing {
+    display: none;
   }
 }
 
@@ -731,14 +711,9 @@ input:focus-visible {
   justify-content: center;
 }
 
-.report-card-wrap {
-  position: relative;
-  width: 100%;
-  max-width: 360px;
-}
-
 .report-card-shell {
   width: 100%;
+  max-width: 360px;
   padding: 9px;
   border-radius: calc(var(--radius-lg) + 9px);
   background: linear-gradient(160deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.15));
