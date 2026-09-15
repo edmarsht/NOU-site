@@ -559,6 +559,31 @@ input:focus-visible {
   font-size: 15px;
 }
 
+/* Kid's drawing separator band */
+.drawing-band {
+  display: flex;
+  justify-content: center;
+  padding: 56px 24px;
+  background: var(--bg);
+}
+
+.drawing-band-img {
+  display: block;
+  width: 100%;
+  max-width: min(88%, 560px);
+  height: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  box-shadow: 0 24px 48px -28px rgba(var(--shadow-ink), 0.35);
+  background: #fff;
+}
+
+@media (max-width: 640px) {
+  .drawing-band {
+    padding: 40px 20px;
+  }
+}
+
 /* Parallax illustration band */
 .parallax-band {
   position: relative;
